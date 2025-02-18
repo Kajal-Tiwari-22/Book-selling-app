@@ -26,7 +26,7 @@ const BookCard = ({ data, favourite }) => {
             <Link to={`/view-book-details/${data._id}`}>
                 <div className=''>
                     <div className='bg-zinc-900 rounded flex items-center justify-center'>
-                        <img src={data.url} alt="book image" className='h-[25vh]' />
+                        <img src={data.url} alt="book image." className='h-[25vh]' />
                     </div>
                     <h2 className='mt-4 text-xl font-semibold'>{data.title}</h2>
                     <p className='mt-2 text-zinc-400 font-semibold'>by {data.author}</p>

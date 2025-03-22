@@ -16,7 +16,7 @@ const AllOrders = () => {
   useEffect(() => {
     const fetch = async () => {
       const response = await axios.get(
-        `${import.meta.env.VITE_BASE_URL}/api/v1/get-all-orders`,
+        `https://book-selling-app-ta5y.onrender.com/api/v1/get-all-orders`,
         { headers }
       );
       setAllOrders(response.data.data);

@@ -18,7 +18,7 @@ const UserOrderHistory = () => {
     const fetch = async () => {
       setLoading(true); // Start loading
       try {
-        const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/v1/get-order-history`, { headers });
+        const response = await axios.get(`https://book-selling-app-ta5y.onrender.com/api/v1/get-order-history`, { headers });
         console.log("Order History Response:", response.data); // Log successful response
         setOrderHistory(response.data.data);
       } catch (error) {

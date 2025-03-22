@@ -11,7 +11,7 @@ const AllBooks = () => {
       const fetch = async () => {
           try {
               const response = await axios.get(
-                  `${import.meta.env.VITE_BASE_URL}/api/v1/get-all-books`
+                  `https://book-selling-app-ta5y.onrender.com/api/v1/get-all-books`
               );
               setData(response.data.data);
           } catch (error) {

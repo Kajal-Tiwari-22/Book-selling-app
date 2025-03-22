@@ -21,7 +21,7 @@ const ViewBookDetails = () => {
         const fetch = async () => {
             try {
                 const response = await axios.get(
-                    `${import.meta.env.VITE_BASE_URL}/api/v1/get-book-by-id/${id}`
+                    `https://book-selling-app-ta5y.onrender.com/api/v1/get-book-by-id/${id}`
                 );
                 setData(response.data.data);
             } catch (error) {
@@ -40,7 +40,7 @@ const ViewBookDetails = () => {
     const handleFavourite = async () => {
         try {
             const response = await axios.put(
-                 `${import.meta.env.VITE_BASE_URL}/api/v1/add-book-to-favourite`,
+                 `https://book-selling-app-ta5y.onrender.com/api/v1/add-book-to-favourite`,
                 {},
                 { headers }
             );
@@ -53,7 +53,7 @@ const ViewBookDetails = () => {
     const handleCart = async () => {
         try {
             const response = await axios.put(
-                 `${import.meta.env.VITE_BASE_URL}/api/v1/add-to-cart`,
+                 `https://book-selling-app-ta5y.onrender.com/api/v1/add-to-cart`,
                 {},
                 { headers }
             );
@@ -64,7 +64,7 @@ const ViewBookDetails = () => {
         }
     };
     const deleteBook = async () => {
-        const response = await axios.delete( `${import.meta.env.VITE_BASE_URL}/api/v1/delete-book`,
+        const response = await axios.delete( `https://book-selling-app-ta5y.onrender.com/api/v1/delete-book`,
             {headers}
         );
         alert(response.data.message);

@@ -18,7 +18,7 @@ const Settings = () => {
   useEffect(() => {
     const fetch = async () => {
       const response = await axios.get(
-         `${import.meta.env.VITE_BASE_URL}/api/v1/get-user-information`,
+         `https://book-selling-app-ta5y.onrender.com/api/v1/get-user-information`,
         { headers }
       );
       setProfileData(response.data);
@@ -27,7 +27,7 @@ const Settings = () => {
     fetch();
   }, []);
   const submitAddress = async () => {
-    const response = await axios.put( `${import.meta.env.VITE_BASE_URL}/api/v1/update-address`,
+    const response = await axios.put( `https://book-selling-app-ta5y.onrender.com/api/v1/update-address`,
       Value,
       { headers }
     );

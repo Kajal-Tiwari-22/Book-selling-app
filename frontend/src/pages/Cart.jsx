@@ -18,7 +18,7 @@ const Cart = () => {
         const fetch = async () => {
             try {
                 const res = await axios.get(
-                    `${import.meta.env.VITE_BASE_URL}/api/v1/get-user-cart`,
+                    `https://book-selling-app-ta5y.onrender.com/api/v1/get-user-cart`,
                     { headers }
                 );
                 console.log("API Response: ", res.data); // Log the response
@@ -41,7 +41,7 @@ const Cart = () => {
     
     const deleteItem = async (id) => {
         try {
-            await axios.put(`${import.meta.env.VITE_BASE_URL}/api/v1/remove-from-cart/${id}`, {} ,{ headers }); // Call the backend to delete item
+            await axios.put(`https://book-selling-app-ta5y.onrender.com/api/v1/remove-from-cart/${id}`, {} ,{ headers }); // Call the backend to delete item
             const updatedCart = Cart.filter((item) => item._id !== id);
             setCart(updatedCart);
         } catch (error) {
@@ -51,7 +51,7 @@ const Cart = () => {
 
 /*
     const deleteItem = async (bookid) => {
-        const response = await axios.put(`${import.meta.env.VITE_BASE_URL}/api/v1/remove-from-cart/${bookid}`, {}, { headers }
+        const response = await axios.put(`https://book-selling-app-ta5y.onrender.com/api/v1/remove-from-cart/${bookid}`, {}, { headers }
 
         );
         alert(response.data.message);
@@ -72,7 +72,7 @@ const Cart = () => {
     const PlaceOrder = async () => {
         try {
             const response = await axios.post(
-                `${import.meta.env.VITE_BASE_URL}/api/v1/place-order`,
+                `https://book-selling-app-ta5y.onrender.com/api/v1/place-order`,
                 { order: Cart },
                 { headers }
             );
@@ -96,7 +96,7 @@ const Cart = () => {
         };
 
         try {
-            await axios.post(`${import.meta.env.VITE_BASE_URL}/api/v1/place-order`, orderData, { headers });
+            await axios.post(`https://book-selling-app-ta5y.onrender.com/api/v1/place-order`, orderData, { headers });
             alert("Order placed successfully!");
             setCart([]); // Clear the cart after placing the order
         } catch (error) {

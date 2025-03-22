@@ -33,7 +33,7 @@ const AddBook = () => {
             }
             else {
                 const response = await axios.post(
-                    `${import.meta.env.VITE_BASE_URL}/api/v1/add-book`,
+                    `https://book-selling-app-ta5y.onrender.com/api/v1/add-book`,
                     Data,
                     { headers }
                 );

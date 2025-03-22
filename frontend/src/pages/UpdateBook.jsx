@@ -38,7 +38,7 @@ const UpdateBook = () => {
             }
             else {
                 const response = await axios.put(
-                    `${import.meta.env.VITE_BASE_URL}/api/v1/update-book`,
+                    `https://book-selling-app-ta5y.onrender.com/api/v1/update-book`,
                     Data,
                     { headers }
                 );
@@ -62,7 +62,7 @@ const UpdateBook = () => {
     useEffect(() => {
         const fetch = async () => {
             const response = await axios.get(
-                `${import.meta.env.VITE_BASE_URL}/api/v1/get-book-by-id/${id}`
+                `https://book-selling-app-ta5y.onrender.com/api/v1/get-book-by-id/${id}`
             );
             setData(response.data.data);
         }

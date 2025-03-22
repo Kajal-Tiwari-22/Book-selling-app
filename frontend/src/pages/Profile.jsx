@@ -18,7 +18,7 @@ const Profile = () => {
   };
   useEffect(() => {
     const fetch = async () => {
-      const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/v1/get-user-information`,
+      const response = await axios.get(`https://book-selling-app-ta5y.onrender.com/api/v1/get-user-information`,
         { headers }
       );
       setProfile(response.data);

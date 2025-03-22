@@ -15,7 +15,7 @@ const Favourites = () => {
     const fetch = async () => {
 
       const response = await axios.get(
-         `${import.meta.env.VITE_BASE_URL}/api/v1/get-favourite-book`,
+         `https://book-selling-app-ta5y.onrender.com/api/v1/get-favourite-book`,
         { headers }
       );
 
